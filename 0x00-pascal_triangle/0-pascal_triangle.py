@@ -4,10 +4,12 @@
 Task 0
 """
 
+
 def pascal_triangle(n):
 
+
         """
-        returns a list of lists of integers representing the Pascal’s triangle of n
+        returns list of lists of integers representing the Pascal’s triangle n
         """
         if n <= 0:
             return []
@@ -22,5 +24,4 @@ def pascal_triangle(n):
                     prev_row = triangle[i - 1]
                     row.append(prev_row[j - 1] + prev_row[j])
             triangle.append(row)
-
         return triangle

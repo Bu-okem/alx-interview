@@ -15,7 +15,6 @@ def canUnlockAll(boxes):
     opened[0] = True
     keys = []
 
-    print(opened)
 
     def get_keys(box):
 
@@ -27,21 +26,22 @@ def canUnlockAll(boxes):
                 keys.append(key)
 
     def checkBox(box):
+
+        """
+        Opens box and gets the keys if it can be opened and isn't open
+        """
         if opened[box]:
             return
-        elif len(boxes[box]) and box in keys:
+        elif box in keys:
             opened[box] = True
+            get_keys(boxes[box])
 
     get_keys(boxes[0])
 
     for box in range(num_of_boxes):
-        get_keys(boxes[box])
         checkBox(box)
 
     for box in range(num_of_boxes):
-        get_keys(boxes[box])
         checkBox(box)
-
-    print(opened)
     
     return all(opened)

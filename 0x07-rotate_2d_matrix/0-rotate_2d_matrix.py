@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 """
-Given an n x n 2D matrix, rotate it 90 degrees clockwise.
+Given an n x n 2D matrix, rotate it 90 degrees clockwise
 """
+
 
 def rotate_2d_matrix(matrix):
     """
@@ -17,6 +18,7 @@ def rotate_2d_matrix(matrix):
     # Reverse each row
     for i in range(n):
         matrix[i] = matrix[i][::-1]
+
 
 if __name__ == "__main__":
     matrix = [[1, 2, 3],

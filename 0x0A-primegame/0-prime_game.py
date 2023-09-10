@@ -21,8 +21,9 @@ def primeNumbers(n):
 def isWinner(x, nums):
     """
     Given a set of consecutive integers starting from 1 up to and including n,
-    players take turns choosing a prime number from the set and removing that number
-    and its multiples from the set. The player that cannot make a move loses.
+    players take turns choosing a prime number from the set and removing that
+    number and its multiples from the set. The player that cannot make a move
+    loses
     Return: Name of winner or None if winner cannot be found
     """
     if x is None or nums is None or x == 0 or nums == []:
